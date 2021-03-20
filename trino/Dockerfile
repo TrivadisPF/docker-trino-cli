@@ -12,6 +12,9 @@ ENV TRINO_VERSION=353 \
     TRINO_CLI_HOME=/opt/trino-cli \
     TRINO_CLI_JAR=/opt/trino-cli/trino-cli-${TRINO_VERSION}-executable.jar
 
+# Install Java
+RUN apk --no-cache add openjdk11 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+
 # Install Trino CLI
 RUN mkdir -p "/opt/trino-cli" \
  && wget "https://repo1.maven.org/maven2/io/trino/trino-cli/${TRINO_VERSION}/trino-cli-${TRINO_VERSION}-executable.jar" \
