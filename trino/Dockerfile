@@ -1,6 +1,6 @@
 #
 #  Author: Guido Schmutz
-#  Date: 2021-03-18
+#  Date: 2023-02-24
 #
 #  https://github.com/trivadispf/docker-trino-cli
 #
@@ -8,7 +8,7 @@ FROM alpine:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV TRINO_VERSION=353 \
+ENV TRINO_VERSION=408 \
     TRINO_CLI_HOME=/opt/trino-cli \
     TRINO_CLI_JAR=/opt/trino-cli/trino-cli-${TRINO_VERSION}-executable.jar
 
